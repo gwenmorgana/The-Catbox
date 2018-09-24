@@ -17,6 +17,11 @@ p_sta = 60
 # Base calculations of health and mana from the character's starting stats.
 p_base_health = p_sta * p_leveli / 2 # This converts HPS
 p_base_mana = p_int * p_leveli / 2 # This converts Mana
+# Adding player base skills
+p_one_hand_blunt = 0
+
+
+
 
 
 
