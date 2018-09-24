@@ -14,7 +14,7 @@ p_int = 75
 p_agi = 25
 p_dex = 25
 p_sta = 60
-# Stat calculations start from above listed base stats
+# Base calculations of health and mana from the character's starting stats.
 p_base_health = p_sta * p_leveli / 2 # This converts HPS
 p_base_mana = p_int * p_leveli / 2 # This converts Mana
 
