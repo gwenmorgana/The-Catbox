@@ -28,7 +28,7 @@ puts "Let's print three lines:"
 current_line = 1
 print_a_line(current_line, current_file)
 # the following 4 lines of code will increase the current_line variable by 1, numerically, then write that number to the second line (aka... current_line =+ 1) but in a longer fashion
-current_line = current_line + 1
+current_line = current_line + 1 # You can also increase the value of this variable by using current_line += 1
 print_a_line(current_line, current_file)
 
 current_line = current_line + 1
