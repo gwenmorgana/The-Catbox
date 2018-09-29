@@ -17,8 +17,8 @@ $stdin.gets
 # what am I doing wrong here? Ohh.. I think i need to not call an individual variable in the function..?!
 # puts "#{player_name}\n#{player_level}\s#{player_class}\n#{player_deity}\n\n"
 # Let's try this again...
-puts "#{player_info1}\n#{player_level}\s#{player_class}\n#{player_deity}\n\n"
-puts "STR #{base_str}\nSTA #{base_sta}\nAGI #{base_agi}\nDEX #{base_dex}\nWIS #{base_wis}\nINT #{base_int}\nCHA #{base_cha}\nPOISON #{base_pr}\nMAGIC #{base_mr}\nDISEASE #{base_dr}\nFIRE #{base_fr}\nCOLD #{base_cold}"
+print "#{player_name}\n#{player_level}\s#{player_class}\n#{player_deity}\n\n"
+# puts "STR #{base_str}\nSTA #{base_sta}\nAGI #{base_agi}\nDEX #{base_dex}\nWIS #{base_wis}\nINT #{base_int}\nCHA #{base_cha}\nPOISON #{base_pr}\nMAGIC #{base_mr}\nDISEASE #{base_dr}\nFIRE #{base_fr}\nCOLD #{base_cold}"
 
 
 
