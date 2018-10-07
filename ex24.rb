@@ -35,4 +35,5 @@ puts "We'd have #{beans} beans, #{jars} jars, and #{crates} crates."
 
 start_point = start_point / 10
 puts "We can also do that this way:"
+# this line uses a C style of variables.
 puts "We'd have %s beans, %d jars, and %d crates." % secret_formula(start_point)
