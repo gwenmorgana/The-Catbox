@@ -1,5 +1,5 @@
 note = <<END
-PS C:\ruby\The-Catbox> irb
+PS C:\\ruby\\The-Catbox> irb
 irb(main):001:0> require "./ex25.rb"
 => true
 irb(main):002:0>
@@ -42,7 +42,7 @@ All
 who
 => nil
 irb(main):018:0> quit
-PS C:\ruby\The-Catbox>
+PS C:\\ruby\\The-Catbox>
 END
 
 puts note
