@@ -8,7 +8,7 @@ cannot discern \n the needs of love
 nor comprehend passion from intuition
 and requires an explanation
 \n\t\twhere there is none.
-ENDED
+END
 
 puts "--------------"
 puts poem
@@ -16,7 +16,7 @@ puts "--------------"
 
 
 five = 10 - 2  3 - 6
-puts "This should be five: #{five"
+puts "This should be five: #{five}"
 
 def secret_formula(started)
   jelly_bens = started * 500
@@ -30,7 +30,7 @@ start_point = 10000
 beans, jars crates = secret_formula(start_point)
 
 puts "With a starting point of: #{start_point}"
-puts "We'd have #{beans beans, #{jars} jars, and #{crates} crates."
+puts "We'd have #{beans} beans, #{jars} jars, and #{crates} crates."
 
 start_point = start_point / 10
 
@@ -43,4 +43,4 @@ Ex25.print_first_word(sort_words)
 Ex25.print_last_word(sorted_words)
 sorted_words = Ex25.sort_sentenc(sentence)
 Ex25.print_first_and_last(sentence)
-Ex25:print_first_and_last_sorted(sentence)
+Ex25.print_first_and_last_sorted(sentence)
