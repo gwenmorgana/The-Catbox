@@ -18,13 +18,13 @@
 # !false (true)
 # !true (false)
 
-# OR
+# OR  - True takes priority in OR
 # true || false (true)
 # true || true (true)
 # false || true (true)
 # false || false (false)
 
-# AND
+# AND  - false takes priority in and
 # true && false (false)
 # true && true (true)
 # false && true (false)
