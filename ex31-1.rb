@@ -14,15 +14,23 @@ if cave1 == "Left" || cave1 == "left"
 
   print prompt
   ghostchoice = $stdin.gets.chomp
-  if ghostchoice = "1" || if ghostchoice = "One" || if ghostchoice = "one"
+  if ghostchoice = "1" || ghostchoice = "One" || ghostchoice = "one"
     puts "The ghost slowly turns around and drinks your soul..."
     puts "You have died."
-  elsif ghostchoice = "2" || if ghostchoice = "Two" || if ghostchoice = "two"
+  elsif ghostchoice == "2" || ghostchoice == "Two" || ghostchoice == "two"
     puts "Ahh! You scared me! Haha...OMG"
     puts "Let me introduce you to my friends... Choose a hand, brave adventurer."
-    puts "The ghost extends his two closed fists. Do you choose Left of right?"
+    puts "The ghost extends his two closed fists. Do you choose Left of Right?"
     ghosthand = $stdin.gets.chomp
     print prompt
+    if ghosthand == "Left" || if ghosthand == "left"
+      puts "There is nothing here, just like your soul.."
+      puts "You have been slain by the ghost!"
+    elsif ghosthand == "right" || ghosthand == "Right"
+      puts "You have chosen wisely..."
+      puts "The Ghost fades away with a smile. You survive to live another day."
+    else "You can't use the %s action while alive, mortal." % ghosthand
+    end
 
 
 
@@ -32,5 +40,7 @@ else
   puts "This is not a valid selection... try again!"
 #caveone
 end
+end
 #end
 #caveone
+end

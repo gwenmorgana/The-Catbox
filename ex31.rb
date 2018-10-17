@@ -34,6 +34,7 @@ elsif door == "2"
     puts "The insanity rots your eyes into a pool of muck.  Good job!"
   end
 
+
 else
   puts "You stumble around and fall on a knife and die.  Good job!"
 end
