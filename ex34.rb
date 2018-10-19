@@ -13,6 +13,9 @@ animals = ['bear', 'ruby', 'peacock', 'kangaroo', 'whale', 'platypus']
 e1 = animals[1]
 # The third (3rd) animal.
 e2 = animals[2]
+# The first (1st) animal.
+e3 = animals[0]
+# The animal at 3.
 e4 = animals[3]
 # The fifth (5th) animal.
 e5 = animals[5]
