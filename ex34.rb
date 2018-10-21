@@ -25,3 +25,6 @@ e6 = animals[2]
 e7 = animals[5]
 # The animal at 4
 e8 = animals[4]
+
+puts "Here are the results:\n"
+puts e1, e2, e3, e4, e5, e6, e7, e8

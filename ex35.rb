@@ -5,12 +5,12 @@ def gold_room
   choice = $stdin.gets.chomp
 
   # this line has a bug, so fix it
-  if choice.include?("0") || choice.include?("1")
+  if choice.include?("0") || if choice.include?("1")
     how_much = choice.to_i
   else
     dead("Man, learn to type a number.")
   end
-
+end
   if how_much < 50
     puts "Nice, you're not greedy, you win!"
     exit(0)
@@ -84,7 +84,6 @@ def start
     cthulhu_room
   else
     dead("You stumble around the room until you starve.")
-  end
 end
-
+end
 start
