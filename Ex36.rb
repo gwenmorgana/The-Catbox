@@ -18,3 +18,6 @@ puts "3.) Make sure parts of your programs work as you work on them. Do not writ
 
 puts "\n\n"
 puts "For this lesson, I will construct a game completely, and post the plan in which I will code it."
+
+# https://www.draw.io/#G1dEVH6XGAKYwiN7D_YY6T3KwUybFzNy6c
+# this is my flowchart
