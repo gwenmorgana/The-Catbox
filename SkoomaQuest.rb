@@ -45,10 +45,13 @@ def main_menu
   puts "Game Intro Text"
   puts "1.) New Game."
   puts "2.) Quit."
+  # puts prompt
+  print "\nSQ:> "
+
   choice = $stdin.gets.chomp
-  if choice.to_i == "1"
+  if choice.include?("1")
     room1
-  elsif choice.to_i = "2"
+  elsif choice.include?("2")
   endgame
 else
   error
