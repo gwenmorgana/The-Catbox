@@ -1,4 +1,4 @@
-Keywords
+# Keywords
 Keyword	Description	Example
 BEGIN	Run this block when the script starts.	BEGIN { puts "hi" }
 END	Run this block when the script is done.	END { puts "hi" }
