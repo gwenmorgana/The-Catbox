@@ -1,7 +1,7 @@
 # Welcome to SkoomaQuest. A Game by Richard Grady.
-
+#
 # include CombatEngine.rb - Experimental - disabled for simplicity at this point...
-
+#
 prompt = "SQ:> "
 
 # error handler
