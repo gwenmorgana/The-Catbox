@@ -23,7 +23,7 @@ end
 puts "There we go: #{stuff}"
 
 puts "Let's do some things with stuff."
-
+$stdin.gets
 puts stuff[1]
 puts stuff[-1]
 puts stuff.pop()
