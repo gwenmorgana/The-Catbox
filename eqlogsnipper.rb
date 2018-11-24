@@ -38,7 +38,7 @@ File.open("explog.txt", 'r') do |file| # change processed.txt to explog.txt for 
       is_proper_date = false
     end
 
-    is_proper_date = true if line.match("Thu")
+    is_proper_date = true if line.match("Thu Nov 8") # edit this parameter...
 
     puts line if is_proper_date == true
   end
