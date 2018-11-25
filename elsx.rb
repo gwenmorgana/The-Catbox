@@ -49,7 +49,7 @@ File.open(baselog, 'r') do |file| # variable obtained via $stdin
   file.readlines.each do |line|
 
 # need to beef up the regex, future editions need the ability to search special characters
-    if parameter == true && (line.match(/i/) || line.strip.empty?) # /i/ case insensitive
+    if parameter == true && (line.match(//) || line.strip.empty?) # /i/ case insensitive
       parameter = false
     end
 
