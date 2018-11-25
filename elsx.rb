@@ -49,7 +49,7 @@ File.open(baselog, 'r') do |file| # variable obtained via $stdin
   file.readlines.each do |line|
 
 # need to beef up the regex, future editions need the ability to search special characters
-    if parameter == true && (line.match(//) || line.strip.empty?) # Prior entry using Caret was getting everything after the correct value - This is now corrected.
+    if parameter == true && (line.match(/i/) || line.strip.empty?) # /i/ case insensitive
       parameter = false
     end
 
@@ -68,5 +68,6 @@ end
 # display the number of results to the console.
 puts "#{total_results} results have been found and exported into #{filename}"
 # Adding a 'pause' so the prompt window closing doesn't mask the result info from the enduser.
-puts "Press ANY key to close this program."
+puts "Press ENTER key to close this program."
 $stdin.gets
+exit(0)
