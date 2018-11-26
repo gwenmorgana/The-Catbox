@@ -2,16 +2,16 @@
 class Animal
 end
 
-## ??
+## is-a
 class Dog < Animal
 
   def initialize(name)
-    ## ??
+    ## has-a
     @name = name
   end
 end
 
-## ??
+## has-a
 class Cat < Animal
 
   def initialize(name)
