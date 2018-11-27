@@ -21,17 +21,17 @@ puts "EQ Log Snipper v1 - by Infestation of p2002.com"
 puts "github.com/gwenmorgana"
 
 # establish a variable that loads the log file to be analyzed
-print "Please enter the name of the EQ Log to be searched: "
+print "Please enter the name of the EQ Log to be searched: \n"
 baselog = $stdin.gets.chomp
 
 # establish a variable that tells the program what to search for
 puts "EQ Log Example - [Tue Aug 21 14:36:19 2018] You feel different."
-print "Please enter a search parameter: "
+print "Please enter a search parameter: \n"
 search = $stdin.gets.chomp
 
 # establish a variable to name the file containing the search results
 puts "Warning: Output file will be truncated!"
-print "Please choose a name for your output text file: "
+print "Please choose a name for your output text file: \n"
 filename = $stdin.gets.chomp
 
 # file system prep, open output file and flag to allow writing of data.
@@ -66,8 +66,8 @@ File.open(baselog, 'r') do |file| # variable obtained via $stdin
 
 end
 # display the number of results to the console.
-puts "#{total_results} results have been found and exported into #{filename}"
+puts "#{total_results} results have been found and exported into #{filename}\n\n\n"
 # Adding a 'pause' so the prompt window closing doesn't mask the result info from the enduser.
-puts "Press ENTER key to close this program."
+puts "Press ENTER key to close this program.\n"
 $stdin.gets
 exit(0)
