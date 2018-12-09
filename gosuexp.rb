@@ -9,14 +9,27 @@ class Tutorial < Gosu::Window
     self.caption = "Tutorial Game"
     # Draws a tiled background in the window form the space.png file
     @background_image = Gosu::Image.new("media/space.png", :tileable => true)
+    @player = Player.new
+    @player.warp(320, 240)
+
   end
 
   def update
-    # ...
+    if Gosu.button_down? Gosu::KB_LEFT or Gosu::button_down? Gosu::GP_LEFT
+      @player.turn_left
+    end
+    if Gosu.button_down? Gosu::KB_RIGHT or Gosu::button_down? Gosu::GP_RIGHT
+      @player.turn_right
+    end
+    if Gosu.button_down? Gosu::KB_UP or Gosu::button_down? Gosu::GP_BUTTON_0
+      @player.accelerate
+    end
+    @player.move
   end
 
   def draw
     # draw the background image each time, 60 times per second
+    @player.draw
     @background_image.draw(0, 0, 0)
   end
 end
