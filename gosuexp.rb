@@ -1,6 +1,6 @@
 # Load the gosu library
 require 'gosu'
-#require 'ZOrder.rb'
+require "./ZOrder.rb"
 # set Tutorial as within the Gosu master class
 class Tutorial < Gosu::Window
   def initialize
@@ -9,10 +9,12 @@ class Tutorial < Gosu::Window
     # Title the produced window
     self.caption = "Get blazed with the Feline!"
     # Draws a tiled background in the window form the space.png file
-    @background_image = Gosu::Image.new("media/grass.jpg", :tileable => true)
+    @background_image = Gosu::Image.new("media/space.png", :tileable => true)
     @player = Player.new
     @player.warp(320, 240)
-
+# I left off here
+    @star_anim =
+# end last position
   end
 
   def update
@@ -75,7 +77,7 @@ class Player
   def collect_stars(stars)
     stars.reject! { |star| Gosu.distance(@x, @y, star.x, star.y) < 35 }
   end
-
+end
 
 
   def initialize
@@ -89,11 +91,11 @@ class Player
   end
 
   def turn_left
-    @angle -= 1.5
+    @angle -= 4.5
   end
 
   def turn_right
-    @angle += 1.5
+    @angle += 4.5
   end
 
   def accelerate
@@ -107,7 +109,7 @@ class Player
     @x %= 640
     @y %= 480
 
-    @vel_x *= 0.95
+    @vel_x *= 0.95 # old value 0.95 on both velocity entries
     @vel_y *= 0.95
   end
 
@@ -115,5 +117,6 @@ class Player
     @image.draw_rot(@x, @y, 1, @angle)
   end
 end
+
 
 Tutorial.new.show
