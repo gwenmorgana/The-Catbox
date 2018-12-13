@@ -105,7 +105,7 @@ class Game
 		else
 			puts "The lock buzzes one last time and then you hear a sickening"
 			puts "melting sound as the mechanism is fused together."
-			puts "You decide to sit there, and finall the Gothons blow up the"
+			puts "You decide to sit there, and finally the Gothons blow up the"
 			puts "ship from their ship and you die."
 			return :death
 		end
