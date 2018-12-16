@@ -88,7 +88,7 @@ class Tutorial < (Example rescue Gosu::Window)
     @player = Player.new
     @player.warp(320, 240)
 
-    @star_anim = Gosu::Image::load_tiles("media/skooma.bmp", 25, 25)
+    @star_anim = Gosu::Image::load_tiles("media/star.png", 25, 25)
     @stars = Array.new
 
     @font = Gosu::Font.new(20)
