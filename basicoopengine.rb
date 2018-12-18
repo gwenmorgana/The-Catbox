@@ -43,24 +43,93 @@ end
 class CentralCorridor < Scene
 
   def enter()
+    puts "Central Corridor entered."
+    puts "Choose option 1 or 2"
+    print "> "
+
+    action = $stdin.gets.chomp
+
+    if action == "1"
+      puts "Action 1 chosen."
+      return 'death'
+    elsif action == "2"
+      puts "Action 2 chosen."
+      return 'laser_weapon_armory'
+    else
+      puts "Does not compute!"
+      return 'central_corridor'
+    end
   end
 end
 
 class LaserWeaponArmory < Scene
 
   def enter()
+
+  puts "Laser Weapon Armory entered."
+  code = "#{rand(1..9)}#{rand(1..9)}#{rand(1..9)}"
+  print "[Keypad]> "
+  guess = $stdin.gets.chomp
+  guesses = 0
+
+  while guess != code && guesses < 10
+    puts "Code incorrect."
+    guesses += 1
+    print "[Keypad]> "
+    guess = $stdin.gets.chomp
+  end
+
+  if guess == code
+    puts "Code accepted. You may proceed."
+    return 'the_bridge'
+  else
+    puts "You have exceeded your welcome."
+    return 'death'
   end
 end
 
-class TheBridge < Scene
 
+class TheBridge < Scene
   def enter()
+    puts "You have entered the Bridge."
+    puts "Choose 1 or 2."
+    print "> "
+
+    action = $stdin.gets.chomp
+
+    if action == "1"
+      puts "You have failed."
+      return 'death'
+    elsif action == "2"
+      puts "You have suceeded"
+      return 'escape_pod'
+    else
+      puts "Type the correct bloody option man!"
+      return 'the_bridge'
+    end
+
+
   end
 end
 
 class EscapePod < Scene
 
   def enter()
+    puts "You have entered the Escape Pod."
+    puts "Choose 1 thru 5."
+
+    good_pod = rand(1..5)
+    print "Comm Panel:> "
+    guess = $stdin.gets.chomp
+
+    if guess != good_pod
+      puts "You have chosen poorly..."
+      return 'death'
+    else
+      puts "You have chosen wisely..."
+      return 'finished'
+    end
+
   end
 end
 
@@ -73,6 +142,12 @@ class Map
   end
 
   def opening_scene()
+  end
+end
+
+class Finished < Scene
+  def enter()
+    puts "Mission successful. Have a beer!"
   end
 end
 
