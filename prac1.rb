@@ -11,8 +11,11 @@ class Box
 end
 
 # define a subclass
-class BigBox < Box
-
+#class BigBox < Box
+#----
+class BigBox
+  super Box
+  #-----
    # change existing getArea method as follows
    def getArea
       @area = @width * @height
