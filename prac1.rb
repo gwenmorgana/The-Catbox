@@ -11,10 +11,10 @@ class Box
 end
 
 # define a subclass
-#class BigBox < Box
-#----
-class BigBox
-  super Box
+class BigBox < Box
+#---- below doesn't work 
+#class BigBox
+  #super Box
   #-----
    # change existing getArea method as follows
    def getArea
@@ -28,3 +28,17 @@ box = BigBox.new(10, 20)
 
 # print the area using overriden method.
 box.getArea()
+
+class Parent
+  def say(message)
+    p message
+  end
+end
+
+class Child < Parent
+  def say(message)
+    super
+  end
+end
+
+Child.new.say('Hi Console.') # => "Hi Rubyist!"
