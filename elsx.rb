@@ -16,6 +16,26 @@ class Parser
 
   def process()
     menu_place = @start
+
+    while true
+      puts "-----PH-----"
+      menu = method(menu_place)
+      menu_place = menu.call()
+    end
+  end
+
+  def close()
+    puts @lore[rand(@lore.length())]
+    Process.exit(1)
+  end
+
+  def cruncher()
+    #put snipper intro here....
+
+    prompt()
+    action = gets.chomp()
+
+    if action == "1"
 #---------------------------
 # New Code Revisions and Features - Branch 2 added named "Feature-Revisions"
 #require "./searchparam.rb"
