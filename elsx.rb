@@ -29,13 +29,20 @@ class Parser
     Process.exit(1)
   end
 
-  def cruncher()
+  def picker()
     #put snipper intro here....
 
     prompt()
     action = gets.chomp()
 
     if action == "1"
+      puts "PH... exit program"
+      return :close
+    elsif action == "2"
+      puts "PH2... start file process"
+      return :picker
+    end
+  end
 #---------------------------
 # New Code Revisions and Features - Branch 2 added named "Feature-Revisions"
 #require "./searchparam.rb"
