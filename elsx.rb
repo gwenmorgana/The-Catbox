@@ -1,17 +1,26 @@
+# OOP conversion of my first program.
+class Parser
 
+  def initialize(start)
+    @lore = [
+      "EQ Lore 1"
+      "EQ Lore 2"
+      "EQ Lore 3"
+    ]
+    @start = start
+  end
+
+  def prompt()
+    print "ELS:> "
+  end
+
+  def process()
+    menu_place = @start
 #---------------------------
 # New Code Revisions and Features - Branch 2 added named "Feature-Revisions"
-require "./searchparam.rb"
-
+#require "./searchparam.rb"
 # This line tests integration of the searchparam module.
-puts Searchparam::SEARCHLIMITER
-
-
-
-
-
-
-
+#puts Searchparam::SEARCHLIMITER
 #------------------------
 # [Tue Aug 21 14:36:19 2018] You feel different. - Example of log
 
