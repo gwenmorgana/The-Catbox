@@ -84,6 +84,11 @@ class Parser
 
   def close()
     puts @lore[rand(@lore.length())]
+    # display the number of results to the console.
+    puts "#{total_results} results have been found and exported into #{filename}\n\n\n"
+    $stdin.gets
+
+
     Process.exit(1)
   end
 
@@ -104,9 +109,6 @@ class Parser
 
 
 end
-# display the number of results to the console.
-puts "#{total_results} results have been found and exported into #{filename}\n\n\n"
-# Adding a 'pause' so the prompt window closing doesn't mask the result info from the enduser.
-puts "Press ENTER key to close this program.\n"
-$stdin.gets
-exit(0)
+
+letsgo = Parser.new(:process)
+letsgo.play()
