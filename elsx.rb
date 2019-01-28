@@ -103,7 +103,7 @@ class Parser
       return :close
     elsif action == "2"
       puts "PH2... start file process"
-      return :picker
+      return :process
     end
   end
 
