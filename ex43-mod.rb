@@ -3,10 +3,9 @@ class Game
 
 	def initialize(start)
 		@quips = [
-			"You died. You kinda suck at this.",
-			"Nice job, you died ...jackass.",
-			"Such a luser.",
-			"I have a small puppy that's better at this."
+			"Fail 1",
+			"Fail 2",
+			"Fail 3"
 		]
 		@start = start
 	end
@@ -109,18 +108,10 @@ class Game
 		guess = gets.chomp()
 
 		if guess.to_i != good_pod
-			puts "You jump into pod %s and hit the eject button." %guess
-			puts "The pod escapes out into the void of space, then"
-			puts "implodes as the hull ruptures, crushing your body"
-			puts "into jam jelly."
+			puts "Fail."
 			return :death
 		else
-			puts "You jump into pod %s and hit the eject button." %guess
-			puts "The pod easily slides out into space heading to"
-			puts "the planet below. As it flies to the planet, you look"
-			puts "back and see your ship implode then explode like a"
-			puts "bright star, taking out the Gothon ship at the same"
-			puts "time. You won!"
+			puts "Success."
 			Process.exit(0)
 		end
 	end

@@ -19,7 +19,7 @@ class Parser
     menu_place = @start
 
     while true
-      
+
       #---------------------------
       # New Code Revisions and Features - Branch 2 added named "Feature-Revisions"
       #require "./searchparam.rb"
@@ -95,6 +95,7 @@ class Parser
 
   def picker()
     #put snipper intro here....
+    puts "1 to Exit, 2 to Load."
 
     prompt()
     action = gets.chomp()
@@ -109,6 +110,7 @@ class Parser
   end
 
 
+end
 end
 
 letsgo = Parser.new(:process)
