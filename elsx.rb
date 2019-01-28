@@ -3,9 +3,10 @@ class Parser
 
   def initialize(start)
     @lore = [
-      "EQ Lore 1"
-      "EQ Lore 2"
+      "EQ Lore 1",
+      "EQ Lore 2",
       "EQ Lore 3"
+
     ]
     @start = start
   end
@@ -18,7 +19,7 @@ class Parser
     menu_place = @start
 
     while true
-      puts "-----PH-----"
+      
       #---------------------------
       # New Code Revisions and Features - Branch 2 added named "Feature-Revisions"
       #require "./searchparam.rb"
@@ -111,4 +112,4 @@ class Parser
 end
 
 letsgo = Parser.new(:process)
-letsgo.play()
+letsgo.process()
