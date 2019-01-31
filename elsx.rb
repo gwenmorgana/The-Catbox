@@ -19,13 +19,15 @@ class Parser
     menu_place = @start
 
     while true
+      puts "\n------- PH"
+      place = method(next_place)
+      next_place = place.call()
 
 
-        end
+        
 
 
-      menu = method(menu_place)
-      menu_place = menu.call()
+
     end
   end
 
