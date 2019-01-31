@@ -1,26 +1,19 @@
--- Nerissa_Clothspinner
--- Makes use of the item_turnin module, string_ext module for findi and client_ext module for Client:GiveCash() and Client:Faction()
-function event_waypoint_arrive(e)
-	if(e.wp == 17) then
-		e.self:Say("When will my sister show up? I need her!");
-	elseif(e.wp == 43) then
-		e.self:Say("Bartender! Some water, please.");
-	end
-end
+-- Nillipuss
 
 function event_say(e)
 	if(e.message:findi("hail")) then
-		e.self:QuestSay(e.other, "Good day to you! Be careful in the city of Qeynos. [Rumors] of corruption may be true. Believe me. I wish my [sister] were here to help.");
-	elseif(e.message:findi("sister")) then
-		e.self:QuestSay(e.other, "My sister is in the Karanas. She is a warrior. Her name is Milea. I really need her. Would you please deliver a note to her? You look able-bodied enough for the job.");
-	elseif(e.message:findi("deliver a note")) then
+		e.self:QuestSay(e.other, "Yeah, yeah, you know my name... but drinking [ale] is my new game.");
+	elseif(e.message:findi("ale")) then
+		e.self:QuestSay(e.other, "Ale fit for a brownie, but delicious to all. I shall give you a [list] so you can craft it for us all!");
+	elseif(e.message:findi("list")) then
+	  e.self:QuestSay(e.other, "Bring me a Jumjum Stalk, a Short Beer, and the Cherries of a great Paladin.");
 		if(e.other:GetLevel() < 4) then
 			e.self:Say("I cannot discuss such things with a person as young to the world as you are.");
 		elseif(e.other:GetLevel() > 65) then
 			e.self:Say("I cannot trouble a person of your stature with such trivial talk.");
 		else
-			e.self:QuestSay(e.other, "Here you go then, brave adventurer. Godspeed to you.");
-			e.other:SummonItem(18801);
+			e.self:QuestSay(e.other, "What are you waiting for? Go go go!");
+--		e.other:SummonItem(18801);
 		end
 	elseif(e.message:findi("rumors")) then
 		e.self:QuestSay(e.other, "I have heard that a few of the Qeynos merchants and guards are not very happy with the current state of the city. Taxes are too high and many of the guards have been sent to the outlands, leaving Qeynos vulnerable to attack. I do not feel the same way, but I fear these few may become many. I [fear for my life].");
