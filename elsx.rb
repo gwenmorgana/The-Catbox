@@ -24,7 +24,7 @@ class Parser
       next_place = place.call()
 
 
-        
+
 
 
 
@@ -116,10 +116,10 @@ class Parser
       return :process
     end
   end
+end
 
 
-end
-end
+
 
 letsgo = Parser.new(:process)
 letsgo.process()
