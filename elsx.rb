@@ -15,7 +15,7 @@ class Parser
   end
 
   def process()
-    menu_place = @start
+    next_place = @start
 
     while true
       puts "\n------- PH"
