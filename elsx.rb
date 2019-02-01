@@ -6,8 +6,7 @@ class Parser
       "EQ Lore 1",
       "EQ Lore 2",
       "EQ Lore 3"
-
-    ]
+  ]
     @start = start
   end
 
@@ -22,30 +21,37 @@ class Parser
       puts "\n------- PH"
       place = method(next_place)
       next_place = place.call()
-
-
-
-
-
-
     end
   end
 
   def close()
     puts @lore[rand(@lore.length())]
-    # display the number of results to the console.
-    puts "#{total_results} results have been found and exported into #{filename}\n\n\n"
-    $stdin.gets
-
-
     Process.exit(1)
   end
 
   def picker()
-    #put snipper intro here....
     puts "Menu picker PH"
     puts "1 to Exit, 2 to Load."
 
+    prompt()
+    action = gets.chomp()
+
+    if action == "1"
+      puts "PH... exit program"
+      return :close
+    elsif action == "2"
+      puts "PH2... start file process"
+      return :process
+    else puts "Invalid Selection."
+    end
+end
+end
+
+
+letsgo = Parser.new(:process)
+letsgo.process()
+
+=begin
     # mods 1
     #---------------------------
     # New Code Revisions and Features - Branch 2 added named "Feature-Revisions"
@@ -105,21 +111,8 @@ class Parser
 
         #mods 2
 
-    prompt()
-    action = gets.chomp()
+# display the number of results to the console.
+puts "#{total_results} results have been found and exported into #{filename}\n\n\n"
+$stdin.gets
 
-    if action == "1"
-      puts "PH... exit program"
-      return :close
-    elsif action == "2"
-      puts "PH2... start file process"
-      return :process
-    end
-  end
-end
-
-
-
-
-letsgo = Parser.new(:process)
-letsgo.process()
+=end

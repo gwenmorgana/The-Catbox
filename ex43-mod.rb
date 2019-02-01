@@ -32,14 +32,13 @@ class Game
 	def central_corridor()
 		puts "Choose 1, 2, or 3."
 
+
 		prompt()
 		action = gets.chomp()
 
 		if action == "1"
 			puts "Choice 1 PH"
-
 			return :death
-
 		elsif action == "2"
 			puts "Choice 2 PH"
 			return :death
