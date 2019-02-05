@@ -103,6 +103,7 @@ class Game
 
 
 		good_pod = rand(5)+1
+		puts "#{good_pod}"
 		print "[pod #]>"
 		guess = gets.chomp()
 

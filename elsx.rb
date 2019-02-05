@@ -21,31 +21,36 @@ class Parser
       puts " This is the process PH"
       place = method(next_place)
       next_place = place.call()
+      # a mover...
+      #return :picker
     end
   end
 
-  def close()
+  def closer()
     puts @lore[rand(@lore.length())]
     Process.exit(1)
   end
 
   def picker()
+    next_place = @start
     puts "Menu picker PH"
-    puts "1 to Exit, 2 to Load."
+    puts "1 to Load :process, 2 to Load :closer."
 
     prompt()
     action = gets.chomp()
 
     if action == "1"
-      puts "PH... exit program"
-      return :close
+      puts "PH1... start file process."
+      return :process
     elsif action == "2"
-      puts "PH2... start file process"
-      return :picker
+      puts "PH2... Exit Program."
+      return :closer
     else puts "Invalid Selection."
+      return :picker
     end
+  end
 end
-end
+
 
 
 letsgo = Parser.new(:picker)
