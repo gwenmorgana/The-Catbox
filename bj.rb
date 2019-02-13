@@ -13,4 +13,58 @@ class Card
   attr_reader :rank, :suit
   attr_accessor :value
 
-  
+  def initialize(rank, suit)
+    @rank = rank
+    @suit = suit
+  end
+
+  def value
+    value = case @rank.to_i
+    when 1
+      11
+    when 2..10
+      @rank
+    when 11..13
+      10
+    else
+      nil
+    end
+  end
+
+  def display_rank
+    case @rank
+    when "11"
+      "Jack"
+    when "12"
+      "Queen"
+    when "13"
+      "King"
+    when "1"
+      "Ace"
+    else
+      @rank
+    end
+  end
+
+  def to_s
+    "#{display_rank} of #{@suit}, value #{value}"
+  end
+end
+
+# Below is the test function
+# card = Card.new(12,"Spades")
+# puts card.to_s
+
+class Deck
+  attr_accessor :cards
+  def initialize
+    @cards = []
+    Suits.each do |suit|
+      Ranks.each do |rank|
+        @cards << Card.new(rank, suit)
+      end
+    end
+  end
+
+  def shuffle!
+    
