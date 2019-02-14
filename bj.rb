@@ -67,4 +67,16 @@ class Deck
   end
 
   def shuffle!
-    
+    @cards.shuffle!
+  end
+  def draw
+    @cards.pop
+  end
+  def remaining
+    @cards.length
+  end
+end
+
+# d.cards.each do |card|
+# puts card.to_s
+# end
