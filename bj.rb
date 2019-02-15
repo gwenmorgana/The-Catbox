@@ -112,3 +112,57 @@ class Player
   end
 end
 ################################################################################
+
+# Testing the code
+$d = Deck.new
+$d.shuffle!
+puts "A new deck has been shuffled and there are #{$d.remaining} cards"
+
+playah = Player.new
+puts "Player's hand:"
+puts playah.to_s
+dealah = Player.new
+
+
+
+
+
+
+
+if playah.hand_value == 21
+  puts "Player wins with Blackjack!"
+  puts "Dealer's hand:"
+  puts dealah.to_s
+else
+  until playah.hand_value > 21
+    playah.switch_ace
+    puts "Do you want to hit(h) or stay(s)?"
+    action == $stdin.gets.chomp
+    if action == "h"
+      puts "You chose to hit, here's your new hand"
+      playah.hit
+      puts playah.to_s
+    else
+      puts "You chose to stay, here's your final hand"
+      puts playah.to_s
+      break
+    end
+  end
+
+  puts "Dealer's hand:"
+  puts dealah.to_s
+
+  if playah.hand_value <= 21
+    if playah.hand_value > dealah.hand_value
+      puts "Player wins"
+    elsif playah.hand_value == delah.hand_value
+      puts "Dealer and Player tied"
+    else
+      puts "Dealer wins"
+    end
+  else
+    puts "Player busts. Dealer wins"
+  end
+end
+
+puts "There are #{$d.remaining} cards in the deck"
