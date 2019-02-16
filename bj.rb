@@ -149,7 +149,7 @@ else
   if playah.hand_value <= 21
     if playah.hand_value > dealah.hand_value
       puts "Player wins"
-    elsif playah.hand_value == delah.hand_value
+    elsif playah.hand_value == dealah.hand_value
       puts "Dealer and Player tied"
     else
       puts "Dealer wins"
