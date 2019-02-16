@@ -123,12 +123,6 @@ puts "Player's hand:"
 puts playah.to_s
 dealah = Player.new
 
-
-
-
-
-
-
 if playah.hand_value == 21
   puts "Player wins with Blackjack!"
   puts "Dealer's hand:"
@@ -137,7 +131,7 @@ else
   until playah.hand_value > 21
     playah.switch_ace
     puts "Do you want to hit(h) or stay(s)?"
-    action == $stdin.gets.chomp
+    action = $stdin.gets.chomp
     if action == "h"
       puts "You chose to hit, here's your new hand"
       playah.hit
