@@ -1,28 +1,32 @@
 # Blackjack Game
-
+# these are hashes. later they are converted to an array by to_a
+# This hash stores the four suits of cards
 Suits = ["Clubs", "Hearts", "Spades", "Diamonds"]
+# this hash stores the possible cards being drawn by dealer
 Ranks = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"]
 $d = []
 
+# initiates the Card class, which becomes a global constant
 class Card
+  # calls the Enumerable modules which holds methods for searching, sorting
   include Enumerable
   # class variables (private)
-  @@suit_value = Hash[Suits.each_with_index.to_a]
+  @@suit_value = Hash[Suits.each_with_index.to_a] # converts the hash into an array
   @@rank_value = Hash[Ranks.each_with_index.to_a]
-
+# the attribute reader and accessor are a method called on the current class and :name is a paramater that I pass to that method
   attr_reader :rank, :suit
   attr_accessor :value
 
   def initialize(rank, suit)
-    @rank = rank
+    @rank = rank # create an instance variable, @@ is a class variable
     @suit = suit
   end
 
   def value
-    value = case @rank.to_i
-    when 1
+    value = case @rank.to_i # variable equals (switch statement) the initialize rank function to integer (to_i)
+    when 1 # when 1 is drawn it is 11
       11
-    when 2..10
+    when 2..10 # when between 2 and 10, the rank is unchanged
       @rank
     when 11..13
       10
